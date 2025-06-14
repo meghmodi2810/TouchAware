@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Touch Detector</title>
+    <style>
+        body { font-family: Arial; text-align: center; margin-top: 20px; }
+        #video { border: 3px solid #333; max-width: 80%; }
+    </style>
+</head>
+<body>
+    <h1>Touch Detection System</h1>
+    <img id="video" src="{{ url_for('video_feed') }}">
+
+    <script>
+        // For alerts - you'll need to implement this in your Flask app
+        const eventSource = new EventSource("/alerts");
+        eventSource.onmessage = function(e) {
+            alert("ALERT: " + e.data);
+        };
+    </script>
+</body>
+</html>

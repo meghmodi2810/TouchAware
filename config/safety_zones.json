@@ -1,0 +1,12 @@
+{
+  "high_risk_zones": ["groin", "buttocks"],
+  "medium_risk_zones": ["chest", "mouth"],
+  "alert_thresholds": {
+    "pixel_distance": 40,
+    "duration_frames": 15
+  },
+  "privacy": {
+    "blur_sensitive_areas": true,
+    "store_video_footage": false
+  }
+}

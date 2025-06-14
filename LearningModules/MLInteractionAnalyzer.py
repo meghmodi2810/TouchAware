@@ -98,6 +98,10 @@ class MLInteractionAnalyzer:
         # Visual feedback (could be integrated with GUI)
         print(f"ALERT LEVEL {level}: Inappropriate contact detected near {zone}")
 
+    def euclidean_distance(self, point1, point2):
+        """Calculate Euclidean distance between two points"""
+        return np.sqrt((point2[0] - point1[0]) ** 2 + (point2[1] - point1[1]) ** 2)
+
     def train_model(self):
         """Train the ML model with collected data"""
 
